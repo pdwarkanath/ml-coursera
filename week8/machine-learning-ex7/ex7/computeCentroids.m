@@ -27,6 +27,12 @@ centroids = zeros(K, n);
 %
 
 
+for k = 1:K
+    cluster = find(idx == k);
+    centroids(k,:) = mean(X(cluster,:));
+end
+    
+
 
 
 
